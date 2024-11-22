@@ -1,7 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-	value: [],
+	value: []
+	// {
+	// 	title : null,
+	// 	token : null,
+	// 	description : null,
+	// },
 };
 
 export const todosSlice = createSlice({
@@ -9,6 +14,9 @@ export const todosSlice = createSlice({
 	initialState,
 	reducers: {
 		addTodos: (state, action) => {
+			// state.value.description = action.payload.description;
+			// state.value.title = action.payload.title;
+			// state.value.token = action.payload.token;
 			state.value.push(action.payload);
 		},
 		removeTodos: (state, action) => {
