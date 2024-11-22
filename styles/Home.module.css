@@ -15,8 +15,42 @@
 .title a {
   color: #0070f3;
   text-decoration: none;
+  align-items: center;
 }
 
 .title a:hover, .title a:focus, .title a:active {
   text-decoration: underline;
 }
+
+.header {
+  display: flex;
+  flex-direction: column;
+	justify-content: space-around;
+	align-items:center;
+  background-color:darkgrey ;
+  height: 100vh;
+}
+
+.bouton {
+  height: 40px;
+  width: 70px;
+  border-radius: 50px;
+  background-color:bisque;
+}
+ .input {
+  height: 50px;
+  width: 200px;
+  border-radius: 10px;
+  text-align: center;
+ }
+ 
+ .inputtext {
+  color:black;
+
+ }
+
+ .registerSection {
+  
+
+  align-content: space-around;
+ }

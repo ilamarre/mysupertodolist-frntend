@@ -1,0 +1,45 @@
+
+
+.inputTaskcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100wd;
+    height: 150px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    background-color: aqua;
+    margin: 15px;
+}
+
+.bouton {
+    height: 40px;
+    width: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+   
+
+}
+
+.inputTitle {
+height: 35px;
+width: 200px;
+border-radius: 5px;
+text-align: center;
+}
+
+.inputdescription {
+    height: 35px;
+    width: 200px;
+    border-radius: 5px;
+    text-align: center;
+   
+}
+
+.task {
+
+}

@@ -15,8 +15,8 @@ function Todos() {
 
   return (
     <div>
-      <h1>Bienvenue sur votre Todo List</h1>
-      <p>Utilisateur connecté : {user.pseudo}</p>
+      {/* <h1 className={Styles.titre}>Bienvenue sur votre Todo List</h1>
+      <p className={styles.utilsateur}>Utilisateur connecté : {user.pseudo}</p> */}
       <TaskFrom />
       <TaskList/>
     </div>

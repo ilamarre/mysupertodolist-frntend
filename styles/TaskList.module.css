@@ -8,6 +8,8 @@
 	background-color: white;
 	color: black;
 	border-radius: 20px;
+	
+	
 }
 
 .bouton {
@@ -15,20 +17,51 @@
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	border-radius: 5px;
+
+;
+	
 }
 
 .delbouton {
-	background-color: red
+	background-color: red;
+	border-radius: 5px;
+	margin-bottom: 5px;
 }
 
 .modifybouton {
-	background-color: blue
+	background-color: deepskyblue;
+	border-radius: 5px;
+	margin-bottom: 5px;
 }
 
 .checkbouton {
-	background-color: green
+	background-color: lightgreen;
+	border-radius: 5px;
+	margin-bottom: 5px;
 }
 
 .textContainer {
+	background-color: darkgray;
+
+}
+.name {
+	display: flex;
+	justify-content: center;
+
 	
 }
+ .task {
+	background-color:lightgray;
+	border-radius: 10px;
+	align-items: center;
+	align-content:normal;
+	text-align: center;
+	border-color:dodgerblue;
+	border-style: double;
+	margin: 15px
+ }
+
+ .description {
+	
+ }

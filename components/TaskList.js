@@ -1,8 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { addTodos } from '../reducers/todos';
 import React, { useState, useEffect } from 'react';
 import styles from '../styles/TaskList.module.css';
-import { useRouter } from 'next/router';
+
 
 
 
@@ -37,7 +36,7 @@ function TaskList() {
         <div className={styles.card}>
 
             <h2 className={styles.name}> Liste des taches de {user.pseudo}</h2>
-{listtask}
+            {listtask}
         </div>
     );
 }

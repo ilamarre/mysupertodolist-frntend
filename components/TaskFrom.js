@@ -11,7 +11,7 @@ function TaskForm() {
 
     const handleNewTask = () => {
         if (!user?.token) {
-            alert ('vous devez vous connecter!')
+            alert('vous devez vous connecter!')
             return;
         }
         // token est une variable
@@ -31,33 +31,33 @@ function TaskForm() {
                 }));
                 setTitle('');
                 setDescription('');
-                 
+
             });
     };
     return (
 
-        <div>
-            <input
+        <div className={styles.inputTaskcontainer}>
+            <input 
                 type="text"
                 placeholder="Titre de la todo"
                 onChange={(e) => setTitle(e.target.value)}
                 value={title}
                 className={styles.inputTitle}
             />
-            <textarea
+            <textarea 
                 placeholder="Description de la todo"
                 onChange={(e) => setDescription(e.target.value)}
                 value={description}
                 className={styles.inputdescription}
             />
             <button onClick={() => handleNewTask()}
-                className={styles.button}>
+                className={styles.bouton}>
 
                 Ajouter la task
             </button>
-        
-            </div> 
-        
+
+        </div>
+
     );
 };
 export default TaskForm;
@@ -69,7 +69,7 @@ export default TaskForm;
 
 //         fetch("http://localhost:3000/users/task", {
 //             method: "POST",
-//             headers: { "Content-Type": "application/json"  
+//             headers: { "Content-Type": "application/json"
 //             },
 //             body: JSON.stringify({
 //                 title: data.title,

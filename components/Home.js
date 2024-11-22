@@ -76,40 +76,40 @@ function Home() {
             </div>
             <div className={styles.registerContainer}>
                 <div className={styles.registerSection}>
-                    <p>Sign-up</p>
-                    <input
+                    <p className={styles.inputtext}>Céer votre compte</p>
+                    <input className={styles.input}
                         type="text"
                         placeholder="Pseudo"
                         id="signUpPseudo"
                         onChange={(e) => setSignUpPseudo(e.target.value)}
                         value={signUpPseudo}
                     />
-                    <input
+                    <input className={styles.input}
                         type="password"
                         placeholder="Password"
                         id="signUpPassword"
                         onChange={(e) => setSignUpPassword(e.target.value)}
                         value={signUpPassword}
                     />
-                    <button id="register" onClick={handleRegister}>Register</button>
+                    <button className={styles.bouton} id="register" onClick={handleRegister}>Register</button>
                 </div>
                 <div className={styles.registerSection}>
-                    <p>Sign-in</p>
-                    <input
+                    <p className={styles.inputtext}> Connection </p>
+                    <input className={styles.input}
                         type="text"
                         placeholder="Pseudo"
                         id="signInPseudo"
                         onChange={(e) => setsignInPseudo(e.target.value)}
                         value={signInPseudo}
                     />
-                    <input
+                    <input className={styles.input}
                         type="password"
                         placeholder="Password"
                         id="signInPassword"
                         onChange={(e) => setSignInPassword(e.target.value)}
                         value={signInPassword}
                     />
-                    <button id="connection" onClick={handleConnection}>Connect</button>
+                    <button className={styles.bouton} id="connection" onClick={handleConnection}>Connect</button>
                 </div>
             </div>
 
