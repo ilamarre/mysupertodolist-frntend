@@ -7,26 +7,31 @@ function TaskForm() {
     const user = useSelector((state) => state.user.value);
     const dispatch = useDispatch()
     const [description, setDescription] = useState('');
-    const [title, setTitle] = useState('')
+    const [title, setTitle] = useState('');
+
     const handleNewTask = () => {
         if (!user?.token) {
+            alert ('vous devez vous connecter!')
             return;
         }
-        fetch('http://localhost:3000/users/addTask', {
+        // token est une variable
+        fetch(`http://localhost:3000/tasks/:newtasks/${user.token}`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({ title:title, description:description }),
+            body: JSON.stringify({ title: title, description: description, token: user.token }),
         })
             .then(response => response.json())
             .then(data => {
                 dispatch(addTodos({
                     title: data.title,
-                    description: data.description, token: data.addTodos.token
+                    description: data.description,
+                    completed: false,
                 }));
                 setTitle('');
                 setDescription('');
+                 
             });
     };
     return (
