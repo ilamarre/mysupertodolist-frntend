@@ -14,6 +14,9 @@ export const todosSlice = createSlice({
 		removeTodos: (state, action) => {
 			state.value = state.value.filter(todos => todos.title !== action.payload.title);
 		},
+		// todoList : (state, action) => {
+
+		// }
 	// 	upDateTodos: (state, action) => {
 	// 		state.value = 
 	// 	}
