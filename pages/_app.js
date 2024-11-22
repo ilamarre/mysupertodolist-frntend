@@ -3,9 +3,11 @@ import Head from 'next/head';
 
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
+import user from '../reducers/user'
+import todos from '../reducers/todos'
 
 const store = configureStore({
-  reducer: {},
+  reducer: {user, todos},
  });
 
 function App({ Component, pageProps }) {
