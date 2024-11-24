@@ -1,0 +1,86 @@
+.styles.card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 250px;
+	height: 250px;
+	background-color: white;
+	color: black;
+	border-radius: 20px;
+	
+	
+}
+
+.bouton {
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	border-radius: 5px;
+
+;
+	
+}
+
+.delbouton {
+	color: red;
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+.modifybouton {
+	color: deepskyblue;
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+.checkbouton {
+	color: green;
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+.textContainer {
+	background-color: darkgray;
+
+}
+.name {
+	display: flex;
+	justify-content: center;
+
+	
+}
+ .task {
+	background-color:lightgray;
+	border-radius: 10px;
+	align-items: center;
+	align-content:normal;
+	text-align: center;
+	border-color:dodgerblue;
+	border-style: double;
+	margin: 15px
+ }
+
+ .description {
+	
+ }
+
+ .modalContent{
+    display: flex;
+    flex-direction: column;
+   
+    text-align: center;
+    align-content:normal;
+    justify-content: space-evenly;
+ }
+
+ .modalActions{
+    align-content:normal;
+    justify-content: space-evenly;
+    width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	border-radius: 5px;
+ }

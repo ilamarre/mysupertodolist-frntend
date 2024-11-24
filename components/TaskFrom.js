@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addTodos } from '../reducers/todos';
 import React, { useState } from 'react';
 import styles from '../styles/TaskFrom.module.css';
+
 function TaskForm() {
 
     const user = useSelector((state) => state.user.value);
@@ -14,6 +15,11 @@ function TaskForm() {
             alert('vous devez vous connecter!')
             return;
         }
+
+        if (!title || !description) {
+            alert('Veuillez remplir le titre et la description avant de continuer.');
+            return;
+        }
         // token est une variable
         fetch(`http://localhost:3000/tasks/:newtasks/${user.token}`, {
             method: 'POST',
@@ -24,6 +30,7 @@ function TaskForm() {
         })
             .then(response => response.json())
             .then(data => {
+                if (data.result) {
                 dispatch(addTodos({
                     title: data.title,
                     description: data.description,
@@ -31,34 +38,42 @@ function TaskForm() {
                 }));
                 setTitle('');
                 setDescription('');
+                window.location.reload();
 
-            });
-    };
-    return (
+            } else {
+                alert('Erreur lors de l’ajout de la tâche. Veuillez réessayer.');
+            }
+        })
+        .catch (error => {
+        console.error('Erreur lors de la requête :', error);
+        alert('Une erreur est survenue. Veuillez vérifier votre connexion.');
+    });
+};
+return (
 
-        <div className={styles.inputTaskcontainer}>
-            <input 
-                type="text"
-                placeholder="Titre de la todo"
-                onChange={(e) => setTitle(e.target.value)}
-                value={title}
-                className={styles.inputTitle}
-            />
-            <textarea 
-                placeholder="Description de la todo"
-                onChange={(e) => setDescription(e.target.value)}
-                value={description}
-                className={styles.inputdescription}
-            />
-            <button onClick={() => handleNewTask()}
-                className={styles.bouton}>
+    <div className={styles.inputTaskcontainer}>
+        <input
+            type="text"
+            placeholder="Titre de la todo"
+            onChange={(e) => setTitle(e.target.value)}
+            value={title}
+            className={styles.inputTitle}
+        />
+        <textarea
+            placeholder="Description de la todo"
+            onChange={(e) => setDescription(e.target.value)}
+            value={description}
+            className={styles.inputdescription}
+        />
+        <button onClick={() => handleNewTask()}
+            className={styles.bouton}>
 
-                Ajouter la task
-            </button>
+            Ajouter la task
+        </button>
 
-        </div>
+    </div>
 
-    );
+);
 };
 export default TaskForm;
 

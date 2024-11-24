@@ -15,7 +15,7 @@
 .bouton {
 	width: 100%;
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-evenly;
 	align-items: center;
 	border-radius: 5px;
 
@@ -24,19 +24,19 @@
 }
 
 .delbouton {
-	background-color: red;
+	color: red;
 	border-radius: 5px;
 	margin-bottom: 5px;
 }
 
 .modifybouton {
-	background-color: deepskyblue;
+	color: deepskyblue;
 	border-radius: 5px;
 	margin-bottom: 5px;
 }
 
 .checkbouton {
-	background-color: lightgreen;
+	color: green;
 	border-radius: 5px;
 	margin-bottom: 5px;
 }
